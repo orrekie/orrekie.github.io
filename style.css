@@ -19,11 +19,14 @@ html, body {
 
 body {
     background-color: #020043;
+    min-height: 100vh;
     text-align: center;
     color: white;
     font-family: 'Courier New', monospace;
     width: 100%;
     max-width: 100%;
+    position: relative;
+    padding-bottom: 118px;
 }
 
 .policy {
@@ -118,6 +121,9 @@ h1, h2 {
 footer {
     background-color: rgba(255,255,255,.06);
     padding: 50px 5vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 480px) {
@@ -140,6 +146,9 @@ footer {
 
 .container .policy-content {
     text-align: left;
+}
+
+.footer-wrapper {
 }
 
 @media screen and (max-width: 330px) {
