@@ -2,9 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="robots" content="noindex">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orrekie - privacy policy</title>
+    <meta name="keywords"
+          content="orrekie, automation, software, architecture, engineering, constructions, email, project management"/>
+    <meta name="og:title" content="orrekie">
+    <meta name="description" content="a project management software for architects by architects.">
+    <meta name="og:description" content="a project management software for architects by architects.">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../policy.js"></script>
+    <script>
+      Document.prototype.ready = function (callback) {
+        if (callback && typeof callback === 'function') {
+          document.addEventListener("DOMContentLoaded", function () {
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              return callback();
+            }
+          });
+        }
+      };
+      document.ready(() => {
+        loadCookie();
+      })
+    </script>
 </head>
 <body>
 
+<div class="policy">
+    <h4>notice</h4>
+    <p>
+        We and selected third parties use cookies or similar technologies for technical purposes and, with your consent,
+        for other purposes as specified in the <a href="#" title="orrekie's cookie policy">cookie&nbsp;policy</a>.
+        Denying consent may make
+        related features unavailable.<br/>
+        You can freely give, deny, or withdraw your consent at any time.<br/>
+        Use the “Accept” button to consent to the use of such technologies.
+    </p>
+
+    <div class="policy-personalize">
+        personalize:<br/>
+        <div>
+            <input onclick="clickGoogleAnalytics()" type="checkbox" alt="allow google analytics"
+                   title="allow google analytics" checked> allow google analytics<br/>
+            <input onclick="clickClarity()" type="checkbox" alt="allow microsoft clarity"
+                   title="allow microsoft clarity" checked> allow microsoft clarity<br/>
+            <input onclick="clickActiveCampaign()" type="checkbox" alt="allow active campaign"
+                   title="allow active campaign" checked> allow active campaign<br>
+        </div>
+    </div>
+
+    <div class="policy-buttons">
+        <a onclick="policyReject()" class="policy-button reject" title="reject orrekie's policies">reject</a>
+        <a onclick="policyPersonalize()" class="policy-button" title="personalize orrekie's policies">personalize</a>
+        <a onclick="policyAccept()" class="policy-button accept" title="accept orrekie's policies">accept</a>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="container">
+    <img class="logo" src="../img/orrekie-logo.png" alt="orrekie's logo"/><br/>
+    <img class="sub-logo" src="../img/orrekie-logo-sub.png" alt="orrekie's phonetic symbols"/>
+
+    <div class="policy-content"></div>
+</div>
+<script>
+  let policy = new XMLHttpRequest();
+  policy.overrideMimeType("application/json");
+  policy.open("GET", "https://www.iubenda.com/api/privacy-policy/79897799", true);
+  policy.onreadystatechange = function () {
+    if (policy.readyState === 4 && policy.status === 200) {
+      const json = JSON.parse(policy.responseText);
+      json.content = json.content.replaceAll("//www.iubenda.com/private/privacy-policy/2355256/cookie-policy", "cookie.html")
+      document.querySelector('.policy-content').innerHTML = json.content;
+    }
+  }
+  policy.send(null);
+</script>
+
+<footer>
+    &copy; 2022 - Orrekie LTD
+</footer>
 </body>
 </html>

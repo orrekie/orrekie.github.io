@@ -138,6 +138,10 @@ footer {
     }
 }
 
+.container .policy-content {
+    text-align: left;
+}
+
 @media screen and (max-width: 330px) {
     .policy {
         font-size: 15px;
