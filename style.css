@@ -1,0 +1,154 @@
+@font-face {
+    src: url("font/courier-new.woff2");
+    font-family: 'Courier New';
+    font-weight: normal;
+}
+
+@font-face {
+    src: url("font/courier-new-bold.woff2");
+    font-family: 'Courier New';
+    font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #020043;
+    text-align: center;
+    color: white;
+    font-family: 'Courier New', monospace;
+    width: 100%;
+    max-width: 100%;
+}
+
+.policy {
+    position: fixed;
+    width: 350px;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(157,156,182);
+    z-index: 1;
+    padding: 15px;
+    border: 1px #000000 solid;
+    color: #ffffff;
+    text-align: left;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.policy h4 {
+    margin: 0;
+}
+.policy.hide {
+    display: none;
+}
+
+.policy p a,
+.policy p a:link,
+.policy p a:hover,
+.policy p a:active,
+.policy p a:visited {
+    color: #ffffff;
+}
+
+.policy .policy-personalize {
+    padding-top: 15px;
+    display: none;
+}
+.policy .policy-personalize.open {
+    display: block;
+}
+.policy .policy-personalize div {
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+.policy .policy-buttons {
+    text-align: center;
+    padding-top: 15px;
+}
+.policy .policy-button:hover {
+    cursor: pointer;
+}
+.policy .policy-button {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: rgba(0,0,0,.48);
+    top: 5px;
+}
+.policy .policy-button.reject {
+    float: left;
+}
+.policy .policy-button.accept {
+    float: right;
+    color: #000000;
+    border-color: #000000;
+}
+.policy .policy-button:nth-child(2) {
+    position: relative;
+    top: 5px;
+}
+
+.container {
+    padding: 10vh 5vh 5vh;
+}
+
+img.logo {
+    width: 200px;
+}
+
+img.sub-logo {
+    width: 160px;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+.clearfix {
+    clear: both;
+}
+
+footer {
+    background-color: rgba(255,255,255,.06);
+    padding: 50px 5vh;
+}
+
+@media screen and (max-width: 480px) {
+    .policy {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        padding: 15px 0;
+    }
+    .policy h4,
+    .policy p,
+    .policy .policy-personalize,
+    .policy .policy-buttons {
+        padding: 0 15px;
+    }
+    .container {
+        padding: 10vh 20px 0 20px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .policy {
+        font-size: 15px;
+    }
+    .policy h4,
+    .policy p,
+    .policy .policy-personalize,
+    .policy .policy-buttons {
+        padding: 0 7px;
+    }
+    .policy .policy-buttons .policy-button {
+        font-size: 14px;
+    }
+}
