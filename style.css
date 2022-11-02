@@ -10,6 +10,18 @@
     font-weight: bold;
 }
 
+@font-face {
+    src: url("font/MYRIADPRO-REGULAR.OTF");
+    font-family: 'Myriad Pro';
+    font-weight: normal;
+}
+
+@font-face {
+    src: url("font/MYRIADPRO-BOLD.OTF");
+    font-family: "Myriad Pro";
+    font-weight: bold;
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -42,6 +54,7 @@ body {
     border-top-left-radius: 15px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    font-family: "Myriad Pro", sans-serif!important;
 }
 .policy h4 {
     margin: 0;
