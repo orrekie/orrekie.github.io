@@ -7,15 +7,27 @@ const clickClarity = () => clarity = !clarity;
 const clickActiveCampaign = () => activeCampaign = !activeCampaign;
 
 const initGoogleAnalytics = async () => {
-  console.log("g");
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G18QY6YB1W');
 }
 
 const initClarity = async () => {
-  console.log("c");
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "es51x7we6f");
 }
 
 const initActiveCampaign = async () => {
-  console.log("a");
+  (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+  vgo('setAccount', '254392279');
+  vgo('setTrackByDefault', true);
+
+  vgo('process');
 }
 
 const GOOGLE_ANALYTICS_COOKIE = "googleAnalytics";
