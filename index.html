@@ -69,8 +69,7 @@
     </h1>
 
     <p>
-        We are an Anglo-Swiss team of designers developing a cloud-based, intuitive, and beautiful platform for
-        information management across your projects.
+        We are an Anglo-Swiss team of designers developing a cloud-based, intuitive, and beautiful platform for information management across your projects. Please follow us, sign up for our newsletter to find out more, and let us keep in touch.
     </p>
 </div>
 
@@ -178,9 +177,18 @@
     #_form_1_ ._x74096368 label { margin-left:15px; }
     #_form_1_ ._x74096368 ._row { margin-left:10px; padding-right:15px; }
     #_form_1_ ._submit { background-color:white !important; color:#020043 !important; font-weight:bold; float:right; border-radius:20px !important; padding:10px 15px !important; }
-    #_form_1_ ._x79894602 input { padding:9px 12px; border-radius:20px; }
-    #_form_1_ ._x76938584 input { padding:9px 12px; border-radius:20px; }
+    #_form_1_ ._x76938584 input { padding:9px 12px; border-radius:20px; margin-top: 20px;}
     #_form_1_._form_1 { border-radius:20px !important; background-color:#110f4e !important; }
+    #_form_1_ ._x64515536 input,
+    #_form_1_ ._x92788358 input {
+        padding:9px 12px;
+        border-radius:20px;
+        width:calc(50% - 10px) !important;
+        float:left;
+    }
+    #_form_1_ ._x92788358 input {
+        margin-left: 20px;
+    }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://unpkg.com/intl-tel-input@17.0.18/build/css/intlTelInput.min.css"/>
@@ -192,7 +200,7 @@
     <input type="hidden" name="m" value="0" />
     <input type="hidden" name="act" value="sub" />
     <input type="hidden" name="v" value="2" />
-    <input type="hidden" name="or" value="369caf4b1fc05776b71edcb3c376bec4" />
+    <input type="hidden" name="or" value="229c923614495e8af21794abbc643586" />
     <div class="_form-content">
         <div class="_form_element _x03201848 _full_width _clear" >
             <div class="_form-title">
@@ -206,14 +214,21 @@
                 </p>
             </div>
         </div>
-        <div class="_form_element _x79894602 _full_width " >
-            <label for="fullname" class="_form-label">
-                Name*
+        <div class="_form_element _x64515536 _full_width " >
+            <label for="firstname" class="_form-label">
             </label>
             <div class="_field-wrapper">
-                <input type="text" id="fullname" name="fullname" placeholder="insert your name" required/>
+                <input type="text" id="firstname" name="firstname" placeholder="your first name" required/>
             </div>
         </div>
+        <div class="_form_element _x92788358 _full_width " >
+            <label for="lastname" class="_form-label">
+            </label>
+            <div class="_field-wrapper">
+                <input type="text" id="lastname" name="lastname" placeholder="your last name" required/>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
         <div class="_form_element _x76938584 _full_width " >
             <label for="email" class="_form-label">
                 Email*
